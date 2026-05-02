@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社概要 | 株式会社HTコネクション</title>
+    
+    <!-- Google Fonts: Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    },
+                    colors: {
+                        'sb-yellow': '#FFCC00',
+                        'sb-blue': '#005BAA',
+                        'sb-text': '#333333',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-sb-text font-sans leading-relaxed">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex flex-col">
+                <h1 class="text-xl font-bold tracking-tight leading-none mb-1"><span class="text-gray-800 font-black">SoftBank</span> <span class="text-sb-yellow">光</span></h1>
+                <span class="text-[10px] text-gray-500 font-bold tracking-wider">株式会社HTコネクション</span>
+            </a>
+            <a href="index.html" class="text-sm font-bold text-sb-blue hover:underline">
+                &larr; 申し込みサイトへ戻る
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-12 md:py-20">
+        <div class="bg-white p-8 md:p-12 shadow-sm border border-gray-200 rounded-lg">
+            <h2 class="text-2xl md:text-3xl font-black text-center mb-10 pb-6 border-b-2 border-sb-yellow inline-block mx-auto w-full">
+                会社概要
+            </h2>
+
+            <div class="border-t border-gray-100">
+                <dl class="divide-y divide-gray-100">
+                    <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                        <dt class="text-sm font-bold leading-6 text-gray-900 bg-gray-50 p-2 sm:bg-transparent sm:p-0">社名</dt>
+                        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">株式会社HTコネクション</dd>
+                    </div>
+                    <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                        <dt class="text-sm font-bold leading-6 text-gray-900 bg-gray-50 p-2 sm:bg-transparent sm:p-0">所在地</dt>
+                        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+                            〒150-0031<br>
+                            東京都渋谷区桜丘町15-14 フジビル40 7階２
+                        </dd>
+                    </div>
+                    <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                        <dt class="text-sm font-bold leading-6 text-gray-900 bg-gray-50 p-2 sm:bg-transparent sm:p-0">営業時間</dt>
+                        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">10:00～19:00</dd>
+                    </div>
+                    <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                        <dt class="text-sm font-bold leading-6 text-gray-900 bg-gray-50 p-2 sm:bg-transparent sm:p-0">定休日</dt>
+                        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">日曜日・祝日・年末年始</dd>
+                    </div>
+                    <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                        <dt class="text-sm font-bold leading-6 text-gray-900 bg-gray-50 p-2 sm:bg-transparent sm:p-0">事業内容</dt>
+                        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">情報通信サービス、インターネット回線取次事業、他</dd>
+                    </div>
+                </dl>
+            </div>
+
+            <!-- Simple Map Placeholder / Contact Info -->
+            <div class="mt-12 p-6 bg-sb-yellow/5 rounded-xl border border-sb-yellow/20">
+                <h3 class="text-lg font-bold mb-4 flex items-center">
+                    <i class="fas fa-phone-alt text-sb-blue mr-2"></i> お問い合わせ先
+                </h3>
+                <p class="text-2xl font-black text-gray-800 mb-2">0120-907-842</p>
+                <p class="text-xs text-gray-500">お電話でのご相談・お申し込みはこちらから承っております。</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-10 text-center text-xs text-gray-500">
+        <p class="mb-2">&copy; 2026 HT Connection Inc. All Rights Reserved.</p>
+        <a href="index.html" class="text-sb-blue hover:underline">トップページに戻る</a>
+    </footer>
+
+</body>
+</html>

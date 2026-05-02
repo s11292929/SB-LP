@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ソフトバンク光 お申し込みサイト | 株式会社HTコネクション</title>
+    
+    <!-- Google Fonts: Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    },
+                    colors: {
+                        sb: {
+                            yellow: '#FFCC00', 
+                            silver: '#C0C4C8', 
+                            gray: '#F3F4F6',
+                            text: '#222222', 
+                            blue: '#0066CC'  
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* カスタムスタイル */
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #ffffff;
+            color: #222222;
+        }
+        .highlight-yellow {
+            background: linear-gradient(transparent 60%, #FFCC00 60%);
+        }
+        .campaign-badge {
+            background: #D31B19;
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body class="pb-24 lg:pb-0 text-sb-text">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 fixed w-full top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-2.5 flex justify-between items-center">
+            <div class="flex flex-col justify-center">
+                <h1 class="text-2xl md:text-3xl font-bold tracking-tight leading-none mb-1"><span class="text-gray-800 font-black">SoftBank</span> <span class="text-sb-yellow">光</span></h1>
+                <span class="text-[10px] md:text-xs text-gray-500 font-bold tracking-wider">株式会社HTコネクション</span>
+            </div>
+            <div class="hidden md:flex gap-6 items-center">
+                <div class="text-right">
+                    <p class="text-xs text-gray-500 mb-0.5">お電話でのご相談はこちら（10:00〜19:00）</p>
+                    <p class="text-lg font-bold text-gray-800"><i class="fas fa-phone-alt text-gray-400 mr-1"></i>0120-907-842</p>
+                </div>
+                <a href="#apply" class="bg-sb-blue hover:bg-blue-700 text-white font-bold py-2.5 px-6 rounded transition duration-300">
+                    Webでお申し込み <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- First View (Hero Section) -->
+    <section class="pt-24 lg:pt-28 pb-12 bg-gray-50 overflow-hidden relative">
+        <div class="max-w-5xl mx-auto px-4 relative z-10 text-center">
+            
+            <!-- メインバナー画像 -->
+            <div class="mb-10 w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-md">
+                <img src="おうちのネットはソフトバンク光.png" alt="おうちのネットはソフトバンク光" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x630/FFCC00/222222?text=Banner+Image'">
+            </div>
+
+            <!-- CTA Buttons for Hero -->
+            <div class="bg-white rounded-3xl shadow-sm p-8 md:p-10 max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center border border-gray-100">
+                <!-- 左側：WEB -->
+                <div class="w-full md:w-1/2 md:pr-8 flex flex-col items-center mb-8 md:mb-0">
+                    <p class="text-2xl font-bold text-gray-800 mb-6 leading-snug text-center tracking-wide">WEBからの<br>お問合せはこちら</p>
+                    <a href="#apply" class="w-full max-w-[300px] bg-gradient-to-r from-[#006AB6] to-[#4EBCF0] text-white text-center py-4 rounded-full font-bold text-xl hover:opacity-90 transition-opacity shadow flex justify-center items-center">
+                        WEB でお問合せ <i class="fas fa-angle-right ml-3 text-xl"></i>
+                    </a>
+                </div>
+                
+                <!-- 分割線 -->
+                <div class="hidden md:block w-px bg-gray-200 self-stretch mx-4"></div>
+                <div class="md:hidden w-full h-px bg-gray-200 mb-8"></div>
+
+                <!-- 右側：電話 -->
+                <div class="w-full md:w-1/2 md:pl-8 flex flex-col items-center">
+                    <p class="text-xl font-bold text-gray-800 mb-2 tracking-wide">お電話でのお問合せ</p>
+                    <a href="tel:0120907842" class="text-4xl md:text-5xl font-black text-[#0081C4] mb-1 tracking-wider hover:opacity-80 transition-opacity">
+                        0120-907-842
+                    </a>
+                    <p class="text-[13px] text-gray-800 mb-6 tracking-wide">（受付時間10：00〜19：00）</p>
+                    <a href="tel:0120907842" class="w-full max-w-[300px] bg-gradient-to-r from-[#006AB6] to-[#4EBCF0] text-white text-center py-4 rounded-full font-bold text-xl hover:opacity-90 transition-opacity shadow flex justify-center items-center">
+                        お電話での予約 <i class="fas fa-angle-right ml-3 text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- お引っ越し窓口バナー -->
+            <div class="mt-16 max-w-4xl mx-auto">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2 tracking-wide">インターネットのお引っ越しはこちら</h3>
+                    <p class="text-sm md:text-base text-gray-600">工事は早めにお申込み下さい</p>
+                </div>
+
+                <div class="bg-sb-yellow rounded-[2rem] p-6 md:p-10 shadow-sm relative overflow-hidden">
+                    <div class="flex flex-col md:flex-row items-center justify-between relative z-10">
+                        <!-- 左側コンテンツ -->
+                        <div class="w-full md:w-2/3 md:pr-4 flex flex-col items-center md:items-start text-center md:text-left">
+                            
+                            <!-- ロゴ風 -->
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-xl md:text-2xl font-serif text-gray-800 tracking-tight">SoftBank 光</span>
+                            </div>
+                            
+                            <!-- 見出し -->
+                            <div class="flex items-center gap-3 mb-6">
+                                <i class="fas fa-truck text-4xl md:text-5xl text-gray-800"></i>
+                                <h4 class="text-3xl md:text-5xl font-black text-gray-800 tracking-tight">お引っ越し窓口</h4>
+                            </div>
+                            
+                            <!-- 電話番号ボタン -->
+                            <div class="bg-white rounded-full py-2 px-6 md:py-3 md:px-8 inline-flex items-center gap-3 mb-5 w-full sm:w-auto justify-center shadow-sm">
+                                <div class="w-8 h-8 md:w-10 md:h-10 bg-sb-yellow rounded-full flex items-center justify-center text-white flex-shrink-0">
+                                    <i class="fas fa-phone-alt text-sm md:text-lg"></i>
+                                </div>
+                                <a href="tel:0120907842" class="text-3xl md:text-5xl font-black text-gray-800 tracking-wider hover:opacity-80 transition-opacity">
+                                    0120-907-842
+                                </a>
+                            </div>
+                            
+                            <p class="text-gray-800 font-bold text-sm md:text-[15px] mt-1 w-full">
+                                お電話一本で専任スタッフが回線のお引越しをお手伝いします。
+                            </p>
+                        </div>
+                        
+                        <!-- 右側：オペレーターイラスト（背景と同化、サイズ調整） -->
+                        <div class="hidden md:flex w-2/5 justify-end items-end pr-4">
+                            <div class="relative w-full h-full max-w-[280px]">
+                                <img src="operator.png" alt="専任スタッフ" class="w-full h-auto block" onerror="this.src='https://api.iconify.design/noto:person-office-worker-light-skin-tone.svg'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Warning Section (お申込みに関する注意喚起) -->
+    <section class="py-16 bg-[#FDF8EE]">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            
+            <div class="mb-4 flex justify-center">
+                <!-- 警告アイコン -->
+                <svg class="w-12 h-12 text-[#D31B19]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                </svg>
+            </div>
+            
+            <h2 class="text-2xl md:text-[2rem] font-bold text-gray-800 mb-8 leading-snug tracking-wide">
+                お申込みが遅れると<br>
+                2か月以上お待ちいただく場合があります。
+            </h2>
+            
+            <p class="text-sm md:text-[15px] text-gray-700 leading-[1.8] text-left md:text-center max-w-[850px] mx-auto">
+                <span class="inline-block">開通手続きの際には回線工事が必要となる場合があり、</span>
+                <span class="text-[#D31B19] inline-block font-bold">工事の予約状況次第では、開通までに2〜3ヶ月以上かかることもあります。</span>
+                <span class="inline-block">特に繁忙期には予約が取りづらく、</span>
+                <span class="font-bold text-[#005BAA] inline-block">「申し込んだのに、いつまでもインターネットが使えない」</span>
+                <span class="inline-block">というケースも珍しくありません。</span>
+                <span class="inline-block">今すぐ使いたい方ほど、手続きを後回しにするのは要注意です。</span>
+                <span class="inline-block">確実にご利用を開始するためにも、</span>
+                <span class="inline-block font-bold underline decoration-sb-yellow decoration-4 underline-offset-4">できるだけ早めのお申し込みをおすすめします。</span>
+            </p>
+            
+        </div>
+    </section>
+
+    <!-- Pricing Section (画像の料金表) -->
+    <section class="py-16 bg-[#FDF8EE]">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-800 mb-2">
+                    高速インターネットが使い放題
+                </h2>
+                <p class="font-bold text-gray-800 text-sm md:text-base">光回線（1ギガ・10ギガ）</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                
+                <!-- 10Gbps Card -->
+                <div class="bg-white rounded-[2rem] shadow-sm overflow-hidden p-2">
+                    <div class="bg-[#F27E1A] text-white rounded-[1.5rem] pt-6 pb-4 flex justify-center items-center gap-2">
+                        <span class="text-[5.5rem] font-black leading-none tracking-tighter -mt-2">10</span>
+                        <div class="flex flex-col">
+                            <span class="text-xs font-bold tracking-wider text-left">下り最大</span>
+                            <span class="text-3xl font-bold leading-none">Gbps <span class="text-[10px] ml-1">※1</span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="px-3 pt-2">
+                        <p class="text-right text-[10px] text-gray-500 mb-2 font-medium">※料金は全て税込表示になります。</p>
+                        <div class="flex gap-2 h-[15rem] mb-5">
+                            <div class="w-24 bg-[#EAF0F6] rounded-xl flex flex-col items-center py-3">
+                                <p class="text-[11px] text-gray-500 font-bold mb-4">回線タイプ</p>
+                                <div class="flex-1 flex flex-col justify-around items-center w-full">
+                                    <div class="text-center">
+                                        <i class="fas fa-home text-4xl text-gray-600 mb-1"></i>
+                                        <p class="text-xs font-bold text-gray-600">戸建て</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <i class="fas fa-building text-4xl text-gray-600 mb-1"></i>
+                                        <p class="text-xs font-bold text-gray-600">マンション</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-1 bg-[#EAF0F6] rounded-xl flex flex-col items-center py-3 px-4">
+                                <p class="text-[11px] text-gray-500 font-bold mb-3">料金</p>
+                                <div class="bg-[#F27E1A] text-white text-[11px] font-bold py-1 w-4/5 text-center flex justify-center items-center gap-2 mb-6">
+                                    SoftBank 光
+                                </div>
+                                <div class="flex items-baseline text-[#5484C6] mb-5">
+                                    <span class="text-6xl font-black tracking-tighter">6,930</span>
+                                    <span class="text-lg font-bold ml-1">円<span class="text-xs font-medium text-gray-400">/月</span></span>
+                                </div>
+                                <div class="text-center text-[10px] text-gray-500 leading-snug">
+                                    <p>月額基本料金 6,380円</p>
+                                    <p>+ホームゲートウェイ(S)550円</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-[#EAF0F6] rounded-xl flex flex-col items-center py-4 mb-5 relative">
+                            <div class="absolute -top-[10px] bg-white px-3 py-0.5 rounded-full text-[11px] text-gray-500 font-bold">事務手数料</div>
+                            <div class="flex items-baseline text-[#5484C6] mt-1">
+                                <span class="text-[2.75rem] font-black tracking-tighter leading-none">4,950</span>
+                                <span class="text-sm font-bold ml-1">円</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-[#EAF0F6] rounded-xl flex flex-col items-center pt-5 pb-8 relative mt-8">
+                            <div class="absolute -top-[10px] bg-white px-4 py-0.5 rounded-full text-[11px] text-gray-500 font-bold">工事費</div>
+                            <div class="relative mt-1">
+                                <div class="flex items-baseline text-[#5484C6] relative z-10">
+                                    <span class="text-[2.75rem] font-black tracking-tighter leading-none">31,680</span>
+                                    <span class="text-sm font-bold ml-1">円</span>
+                                </div>
+                                <div class="absolute top-[55%] left-[-5%] w-[110%] h-[3px] bg-[#E60012] transform -translate-y-1/2 rotate-[-8deg] z-20"></div>
+                            </div>
+                            <p class="text-[11px] text-gray-700 font-bold mt-2">一括払い・分割払い</p>
+                        </div>
+                        
+                        <div class="flex justify-center -mt-5 relative z-20 mb-2">
+                            <div class="text-[#D31B19] text-2xl"><i class="fas fa-caret-down"></i></div>
+                        </div>
+                        
+                        <div class="campaign-badge text-white rounded-2xl py-6 px-4 text-center relative z-10 shadow-2xl">
+                            <p class="text-[12px] font-bold mb-1 tracking-[0.2em] opacity-90">今ならキャンペーンで</p>
+                            <p class="text-[2.75rem] md:text-[3.25rem] font-black tracking-tighter leading-none drop-shadow-lg">全額還元</p>
+                            <div class="absolute -top-3 -right-2 bg-yellow-400 text-red-700 text-[10px] font-black px-2 py-1 rounded-full shadow-md animate-float">実質0円</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1Gbps Card -->
+                <div class="bg-white rounded-[2rem] shadow-sm overflow-hidden p-2">
+                    <div class="bg-[#F0C200] text-white rounded-[1.5rem] pt-6 pb-4 flex justify-center items-center gap-2">
+                        <span class="text-[5.5rem] font-black leading-none tracking-tighter -mt-2">1</span>
+                        <div class="flex flex-col">
+                            <span class="text-xs font-bold tracking-wider text-left">下り最大</span>
+                            <span class="text-3xl font-bold leading-none">Gbps <span class="text-[10px] ml-1">※1</span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="px-3 pt-2">
+                        <p class="text-right text-[10px] text-gray-500 mb-2 font-medium">※料金は全て税込表示になります。</p>
+                        <div class="flex gap-2 h-[15rem] mb-5">
+                            <div class="w-24 bg-[#EAF0F6] rounded-xl flex flex-col items-center py-3">
+                                <p class="text-[11px] text-gray-500 font-bold mb-4">回線タイプ</p>
+                                <div class="flex-1 flex flex-col justify-around items-center w-full">
+                                    <div class="text-center">
+                                        <i class="fas fa-home text-4xl text-gray-600 mb-1"></i>
+                                        <p class="text-xs font-bold text-gray-600">戸建て</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <i class="fas fa-building text-4xl text-gray-600 mb-1"></i>
+                                        <p class="text-xs font-bold text-gray-600">マンション</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-1 bg-[#EAF0F6] rounded-xl flex flex-col items-center py-3 px-2">
+                                <p class="text-[11px] text-gray-500 font-bold mb-3">料金</p>
+                                <div class="bg-[#F27E1A] text-white text-[11px] font-bold py-1 w-4/5 text-center flex justify-center items-center gap-2 mb-3">
+                                    SoftBank 光
+                                </div>
+                                <div class="flex-1 flex flex-col justify-around w-full">
+                                    <div class="flex items-baseline justify-center text-[#5484C6]">
+                                        <span class="text-[2.75rem] font-black tracking-tighter leading-none">5,720</span>
+                                        <span class="text-sm font-bold ml-1">円<span class="text-xs font-medium text-gray-400">/月</span></span>
+                                    </div>
+                                    <div class="w-[85%] mx-auto h-[1px] bg-white my-1"></div>
+                                    <div class="flex items-baseline justify-center text-[#5484C6]">
+                                        <span class="text-[2.75rem] font-black tracking-tighter leading-none">4,180</span>
+                                        <span class="text-sm font-bold ml-1">円<span class="text-xs font-medium text-gray-400">/月</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-[#EAF0F6] rounded-xl flex flex-col items-center py-4 mb-5 relative">
+                            <div class="absolute -top-[10px] bg-white px-3 py-0.5 rounded-full text-[11px] text-gray-500 font-bold">事務手数料</div>
+                            <div class="flex items-baseline text-[#5484C6] mt-1">
+                                <span class="text-[2.75rem] font-black tracking-tighter leading-none">4,950</span>
+                                <span class="text-sm font-bold ml-1">円</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-[#EAF0F6] rounded-xl flex flex-col items-center pt-5 pb-8 relative mt-8">
+                            <div class="absolute -top-[10px] bg-white px-4 py-0.5 rounded-full text-[11px] text-gray-500 font-bold">工事費</div>
+                            <div class="relative mt-1">
+                                <div class="flex items-baseline text-[#5484C6] relative z-10">
+                                    <span class="text-[2.75rem] font-black tracking-tighter leading-none">31,680</span>
+                                    <span class="text-sm font-bold ml-1">円</span>
+                                </div>
+                                <div class="absolute top-[55%] left-[-5%] w-[110%] h-[3px] bg-[#E60012] transform -translate-y-1/2 rotate-[-8deg] z-20"></div>
+                            </div>
+                            <p class="text-[11px] text-gray-700 font-bold mt-2">一括払い・分割払い</p>
+                        </div>
+                        
+                        <div class="flex justify-center -mt-5 relative z-20 mb-2">
+                            <div class="text-[#D31B19] text-2xl"><i class="fas fa-caret-down"></i></div>
+                        </div>
+                        
+                        <div class="campaign-badge text-white rounded-2xl py-6 px-4 text-center relative z-10 shadow-2xl">
+                            <p class="text-[12px] font-bold mb-1 tracking-[0.2em] opacity-90">今ならキャンペーンで</p>
+                            <p class="text-[2.75rem] md:text-[3.25rem] font-black tracking-tighter leading-none drop-shadow-lg">全額還元</p>
+                            <div class="absolute -top-3 -right-2 bg-yellow-400 text-red-700 text-[10px] font-black px-2 py-1 rounded-full shadow-md animate-float">実質0円</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Official Campaigns -->
+    <section class="py-20 bg-gray-50 border-y border-gray-200">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">
+                SoftBank公式キャンペーンも<br class="md:hidden">もちろん併用可能
+            </h2>
+
+            <div class="space-y-4">
+                <div class="bg-white border border-gray-200 flex flex-col md:flex-row hover:shadow-md transition-shadow">
+                    <div class="bg-[#F8F9FA] p-6 flex flex-col justify-center items-center md:w-1/4 text-center border-b md:border-b-0 md:border-r border-gray-100">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-3 shadow-sm border border-gray-100">
+                            <img src="https://api.iconify.design/fluent-emoji-flat:mobile-phone.svg" alt="スマホ" class="w-10 h-10">
+                        </div>
+                        <h3 class="font-bold text-base text-gray-800 leading-tight">おうち割<br>光セット</h3>
+                    </div>
+                    <div class="p-6 md:w-3/4 flex flex-col justify-center">
+                        <p class="text-lg font-bold mb-2 text-gray-800">SoftBank・Y!mobileスマホが毎月割引！</p>
+                        <p class="text-gray-600 text-sm mb-2 leading-relaxed">
+                            ご家族全員のスマホ代が、毎月最大<span class="font-bold text-gray-900">1,650円</span>割引（※1）。離れて暮らす家族も対象になります。
+                        </p>
+                        <p class="text-[11px] text-gray-400">※1 対象プランの場合。別途指定オプション（月額550円〜）の加入が必要です。</p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 flex flex-col md:flex-row hover:shadow-md transition-shadow">
+                    <div class="bg-[#F8F9FA] p-6 flex flex-col justify-center items-center md:w-1/4 text-center border-b md:border-b-0 md:border-r border-gray-100">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-3 shadow-sm border border-gray-100">
+                            <img src="https://api.iconify.design/fluent-emoji-flat:yen-banknote.svg" alt="お金" class="w-10 h-10">
+                        </div>
+                        <h3 class="font-bold text-base text-gray-800 leading-tight">あんしん乗り換え<br>キャンペーン</h3>
+                    </div>
+                    <div class="p-6 md:w-3/4 flex flex-col justify-center">
+                        <p class="text-lg font-bold mb-2 text-gray-800">他社からの乗り換え違約金を満額還元！</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            他社のネット回線を解約する際に発生する違約金や撤去工事費などを、最大<span class="font-bold text-gray-900">10万円</span>までSoftBankが負担します。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white border border-gray-200 flex flex-col md:flex-row hover:shadow-md transition-shadow">
+                    <div class="bg-[#F8F9FA] p-6 flex flex-col justify-center items-center md:w-1/4 text-center border-b md:border-b-0 md:border-r border-gray-100">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-3 shadow-sm border border-gray-100">
+                            <img src="https://api.iconify.design/fluent-emoji-flat:hammer-and-wrench.svg" alt="工事" class="w-10 h-10">
+                        </div>
+                        <h3 class="font-bold text-base text-gray-800 leading-tight">工事費サポート<br>はじめて割</h3>
+                    </div>
+                    <div class="p-6 md:w-3/4 flex flex-col justify-center">
+                        <p class="text-lg font-bold mb-2 text-gray-800">基本工事費が実質無料！</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            開通工事費（最大31,680円）と同額を毎月の月額料金から割引。初期費用を抑えて光回線を始められます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flow Section -->
+    <section class="py-20 bg-white border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">
+                お申し込みから開通までの流れ
+            </h2>
+
+            <div class="space-y-2">
+                <div class="bg-white p-6 border border-gray-200 flex flex-col md:flex-row items-start md:items-center gap-6">
+                    <div class="bg-sb-yellow text-gray-900 font-bold text-sm px-4 py-1.5 flex-shrink-0">
+                        STEP 1
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-1 text-gray-800">Webまたはお電話でお申し込み</h3>
+                        <p class="text-gray-500 text-sm">Webフォームに必要事項を入力して送信、またはフリーダイヤルにお電話ください。スタッフが丁寧にご案内いたします。</p>
+                    </div>
+                </div>
+                <div class="text-center text-gray-300 text-lg py-1"><i class="fas fa-arrow-down"></i></div>
+                
+                <div class="bg-white p-6 border border-gray-200 flex flex-col md:flex-row items-start md:items-center gap-6">
+                    <div class="bg-sb-yellow text-gray-900 font-bold text-sm px-4 py-1.5 flex-shrink-0">
+                        STEP 2
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-1 text-gray-800">内容確認</h3>
+                        <p class="text-gray-500 text-sm">オペレーターよりお電話にて契約内容の確認と、工事日の調整を行います。</p>
+                    </div>
+                </div>
+                <div class="text-center text-gray-300 text-lg py-1"><i class="fas fa-arrow-down"></i></div>
+
+                <div class="bg-white p-6 border border-gray-200 flex flex-col md:flex-row items-start md:items-center gap-6">
+                    <div class="bg-sb-yellow text-gray-900 font-bold text-sm px-4 py-1.5 flex-shrink-0">
+                        STEP 3
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-1 text-gray-800">開通工事・ご利用開始</h3>
+                        <p class="text-gray-500 text-sm">決定した日程に作業員がお伺いし、光回線の工事を行います（立ち会いが必要です）。工事完了後、機器の設定を行えばすぐにインターネットがご利用いただけます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="py-20 bg-gray-50" id="apply">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">
+                お申し込み・お問い合わせ
+            </h2>
+
+            <div class="border border-gray-300 p-6 md:p-10 bg-white shadow-sm">
+                <div class="flex items-center mb-8">
+                    <div class="w-2 h-2 bg-[#005BAA] rounded-full mr-2"></div>
+                    <h3 class="text-[15px] font-bold text-gray-800 tracking-wide">現住所・引越し先住所</h3>
+                </div>
+
+                <form>
+                    <!-- 現在のご住所 -->
+                    <div class="mb-8">
+                        <p class="text-[13px] font-bold text-gray-800 mb-2">現在のご住所</p>
+                        <div class="border border-gray-300 border-b-0">
+                            <div class="flex flex-col md:flex-row border-b border-gray-300">
+                                <div class="bg-[#F3F4F6] text-gray-700 text-[13px] font-bold p-3 md:w-[25%] flex items-center">郵便番号</div>
+                                <div class="p-3 md:w-[75%] bg-white flex items-center">
+                                    <input type="text" placeholder="※ハイフンなし" class="border border-gray-400 px-3 py-1.5 w-full md:w-48 text-[13px] focus:outline-none focus:border-[#005BAA]">
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row border-b border-gray-300">
+                                <div class="bg-[#F3F4F6] text-gray-700 text-[13px] font-bold p-3 md:w-[25%] flex items-center">
+                                    都道府県 <span class="bg-[#D31B19] text-white text-[10px] px-1.5 py-0.5 ml-2 rounded-[2px] font-normal leading-none tracking-wider">必須</span>
+                                </div>
+                                <div class="p-3 md:w-[75%] bg-white flex items-center">
+                                    <select class="border border-gray-400 px-3 py-1.5 w-full md:w-64 text-[13px] focus:outline-none focus:border-[#005BAA] bg-white cursor-pointer">
+                                        <option value="">選択してください</option>
+                                        <option value="北海道">北海道</option>
+                                        <option value="青森県">青森県</option>
+                                        <option value="岩手県">岩手県</option>
+                                        <option value="宮城県">宮城県</option>
+                                        <option value="秋田県">秋田県</option>
+                                        <option value="山形県">山形県</option>
+                                        <option value="福島県">福島県</option>
+                                        <option value="茨城県">茨城県</option>
+                                        <option value="栃木県">栃木県</option>
+                                        <option value="群馬県">群馬県</option>
+                                        <option value="埼玉県">埼玉県</option>
+                                        <option value="千葉県">千葉県</option>
+                                        <option value="東京都">東京都</option>
+                                        <option value="神奈川県">神奈川県</option>
+                                        <option value="新潟県">新潟県</option>
+                                        <option value="富山県">富山県</option>
+                                        <option value="石川県">石川県</option>
+                                        <option value="福井県">福井県</option>
+                                        <option value="山梨県">山梨県</option>
+                                        <option value="長野県">長野県</option>
+                                        <option value="岐阜県">岐阜県</option>
+                                        <option value="静岡県">静岡県</option>
+                                        <option value="愛知県">愛知県</option>
+                                        <option value="三重県">三重県</option>
+                                        <option value="滋賀県">滋賀県</option>
+                                        <option value="京都府">京都府</option>
+                                        <option value="大阪府">大阪府</option>
+                                        <option value="兵庫県">兵庫県</option>
+                                        <option value="奈良県">奈良県</option>
+                                        <option value="和歌山県">和歌山県</option>
+                                        <option value="鳥取県">鳥取県</option>
+                                        <option value="島根県">島根県</option>
+                                        <option value="岡山県">岡山県</option>
+                                        <option value="広島県">広島県</option>
+                                        <option value="山口県">山口県</option>
+                                        <option value="徳島県">徳島県</option>
+                                        <option value="香川県">香川県</option>
+                                        <option value="愛媛県">愛媛県</option>
+                                        <option value="高知県">高知県</option>
+                                        <option value="福岡県">福岡県</option>
+                                        <option value="佐賀県">佐賀県</option>
+                                        <option value="長崎県">長崎県</option>
+                                        <option value="熊本県">熊本県</option>
+                                        <option value="大分県">大分県</option>
+                                        <option value="宮崎県">宮崎県</option>
+                                        <option value="鹿児島県">鹿児島県</option>
+                                        <option value="沖縄県">沖縄県</option>
+                                        <option value="その他">その他</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row border-b border-gray-300">
+                                <div class="bg-[#F3F4F6] text-gray-700 text-[13px] font-bold p-3 md:w-[25%] flex items-center">市区町村</div>
+                                <div class="p-3 md:w-[75%] bg-white flex items-center">
+                                    <input type="text" placeholder="例：港区赤坂" class="border border-gray-400 px-3 py-1.5 w-full md:w-80 text-[13px] focus:outline-none focus:border-[#005BAA]">
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row border-b border-gray-300">
+                                <div class="bg-[#F3F4F6] text-gray-700 text-[13px] font-bold p-3 md:w-[25%] flex items-center">番地等</div>
+                                <div class="p-3 md:w-[75%] bg-white flex items-center">
+                                    <input type="text" placeholder="例：1-2-3 ABCマンション101号室" class="border border-gray-400 px-3 py-1.5 w-full md:w-80 text-[13px] focus:outline-none focus:border-[#005BAA]">
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row border-b border-gray-300">
+                                <div class="bg-[#F3F4F6] text-gray-700 text-[13px] font-bold p-3 md:w-[25%] flex items-center">住居タイプ</div>
+                                <div class="p-3 md:w-[75%] bg-white flex items-center gap-1.5">
+                                    <label class="cursor-pointer">
+                                        <input type="radio" name="cur_type" value="戸建て" class="peer hidden" checked>
+                                        <div class="bg-[#E5E7EB] text-gray-500 px-5 py-1.5 text-xs font-bold peer-checked:bg-sb-blue peer-checked:text-white transition-colors border border-transparent rounded">戸建て</div>
+                                    </label>
+                                    <label class="cursor-pointer">
+                                        <input type="radio" name="cur_type" value="マンション" class="peer hidden">
+                                        <div class="bg-[#E5E7EB] text-gray-500 px-5 py-1.5 text-xs font-bold peer-checked:bg-sb-blue peer-checked:text-white transition-colors border border-transparent rounded">マンション</div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 引越し先のご住所 -->
+                    <div class="mb-8">
+                        <p class="text-[13px] font-bold text-gray-800 mb-2">引越し先のご住所</p>
+                        <div class="border border-gray-300 border-b-0">
+                            <div class="flex flex-col md:flex-row border-b border-gray-300">
+                                <div class="bg-[#F3F4F6] text-gray-700 text-[13px] font-bold p-3 md:w-[25%] flex items-center">郵便番号</div>
+                                <div class="p-3 md:w-[75%] bg-white flex items-center">
+                                    <input type="text" placeholder="※ハイフンなし" class="border border-gray-400 px-3 py-1.5 w-full md:w-48 text-[13px] focus:outline-none focus:border-[#005BAA]">
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row border-b border-gray-300">
+                                <div class="bg-[#F3F4F6] text-gray-700 text-[13px] font-bold p-3 md:w-[25%] flex items-center">
+                                    都道府県 <span class="bg-[#D31B19] text-white text-[10px] px-1.5 py-0.5 ml-2 rounded-[2px] font-normal leading-none tracking-wider">必須</span>
+                                </div>
+                                <div class="p-3 md:w-[75%] bg-white flex items-center">
+                                    <select class="border border-gray-400 px-3 py-1.5 w-full md:w-64 text-[13px] focus:outline-none focus:border-[#005BAA] bg-white cursor-pointer">
+                                        <option value="">選択してください</option>
+                                        <option value="北海道">北海道</option>
+                                        <option value="青森県">青森県</option>
+                                        <option value="岩手県">岩手県</option>
+                                        <option value="宮城県">宮城県</option>
+                                        <option value="秋田県">秋田県</option>
+                                        <option value="山形県">山形県</option>
+                                        <option value="福島県">福島県</option>
+                                        <option value="茨城県">茨城県</option>
+                                        <option value="栃木県">栃木県</option>
+                                        <option value="群馬県">群馬県</option>
+                                        <option value="埼玉県">埼玉県</option>
+                                        <option value="千葉県">千葉県</option>
+                                        <option value="東京都">東京都</option>
+                                        <option value="神奈川県">神奈川県</option>
+                                        <option value="新潟県">新潟県</option>
+                                        <option value="富山県">富山県</option>
+                                        <option value="石川県">石川県</option>
+                                        <option value="福井県">福井県</option>
+                                        <option value="山梨県">山梨県</option>
+                                        <option value="長野県">長野県</option>
+                                        <option value="岐阜県">岐阜県</option>
+                                        <option value="静岡県">静岡県</option>
+                                        <option value="愛知県">愛知県</option>
+                                        <option value="三重県">三重県</option>
+                                        <option value="滋賀県">滋賀県</option>
+                                        <option value="京都府">京都府</option>
+                                        <option value="大阪府">大阪府</option>
+                                        <option value="兵庫県">兵庫県</option>
+                                        <option value="奈良県">奈良県</option>
+                                        <option value="和歌山県">和歌山県</option>
+                                        <option value="鳥取県">鳥取県</option>
+                                        <option value="島根県">島根県</option>
+                                        <option value="岡山県">岡山県</option>
+                                        <option value="広島県">広島県</option>
+                                        <option value="山口県">山口県</option>
+                                        <option value="徳島県">徳島県</option>
+                                        <option value="香川県">香川県</option>
+                                        <option value="愛媛県">愛媛県</option>
+                                        <option value="高知県">高知県</option>
+                                        <option value="福岡県">福岡県</option>
+                                        <option value="佐賀県">佐賀県</option>
+                                        <option value="長崎県">長崎県</option>
+                                        <option value="熊本県">熊本県</option>
+                                        <option value="大分県">大分県</option>
+                                        <option value="宮崎県">宮崎県</option>
+                                        <option value="鹿児島県">鹿児島県</option>
+                                        <option value="沖縄県">沖縄県</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row border-b border-gray-300">
+                                <div class="bg-[#F3F4F6] text-gray-700 text-[13px] font-bold p-3 md:w-[25%] flex items-center">市区町村</div>
+                                <div class="p-3 md:w-[75%] bg-white flex items-center">
+                                    <input type="text" placeholder="例：港区赤坂" class="border border-gray-400 px-3 py-1.5 w-full md:w-80 text-[13px] focus:outline-none focus:border-[#005BAA]">
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row border-b border-gray-300">
+                                <div class="bg-[#F3F4F6] text-gray-700 text-[13px] font-bold p-3 md:w-[25%] flex items-center">番地等</div>
+                                <div class="p-3 md:w-[75%] bg-white flex items-center">
+                                    <input type="text" placeholder="例：1-2-3 ABCマンション101号室" class="border border-gray-400 px-3 py-1.5 w-full md:w-80 text-[13px] focus:outline-none focus:border-[#005BAA]">
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row border-b border-gray-300">
+                                <div class="bg-[#F3F4F6] text-gray-700 text-[13px] font-bold p-3 md:w-[25%] flex items-center">住居タイプ</div>
+                                <div class="p-3 md:w-[75%] bg-white flex items-center gap-1.5">
+                                    <label class="cursor-pointer">
+                                        <input type="radio" name="new_type" value="戸建て" class="peer hidden" checked>
+                                        <div class="bg-[#E5E7EB] text-gray-500 px-5 py-1.5 text-xs font-bold peer-checked:bg-sb-blue peer-checked:text-white transition-colors border border-transparent rounded">戸建て</div>
+                                    </label>
+                                    <label class="cursor-pointer">
+                                        <input type="radio" name="new_type" value="マンション" class="peer hidden">
+                                        <div class="bg-[#E5E7EB] text-gray-500 px-5 py-1.5 text-xs font-bold peer-checked:bg-sb-blue peer-checked:text-white transition-colors border border-transparent rounded">マンション</div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 引越しの予定日（シンプルな表示に戻す） -->
+                    <div class="mb-8">
+                        <p class="text-[13px] font-bold text-gray-800 mb-2">引越しの予定日</p>
+                        <div class="border border-gray-300">
+                            <div class="flex flex-col md:flex-row">
+                                <div class="bg-[#F3F4F6] text-gray-700 text-[13px] font-bold p-3 md:w-[25%] flex items-center">
+                                    予定月日
+                                </div>
+                                <div class="p-3 md:w-[75%] bg-white flex items-center gap-2">
+                                    <select class="border border-gray-400 px-3 py-1.5 w-32 md:w-40 text-[13px] focus:outline-none focus:border-[#005BAA] bg-white cursor-pointer">
+                                        <option value="">- 選択してください -</option>
+                                        <option value="未定">未定</option>
+                                        <option value="引越済み">引越済み</option>
+                                        <option value="1">1月</option>
+                                        <option value="2">2月</option>
+                                        <option value="3">3月</option>
+                                        <option value="4">4月</option>
+                                        <option value="5">5月</option>
+                                        <option value="6">6月</option>
+                                        <option value="7">7月</option>
+                                        <option value="8">8月</option>
+                                        <option value="9">9月</option>
+                                        <option value="10">10月</option>
+                                        <option value="11">11月</option>
+                                        <option value="12">12月</option>
+                                    </select>
+                                    
+                                    <select class="border border-gray-400 px-3 py-1.5 w-32 md:w-40 text-[13px] focus:outline-none focus:border-[#005BAA] bg-white cursor-pointer">
+                                        <option value="">- 選択してください -</option>
+                                        <option value="1">1日</option><option value="2">2日</option><option value="3">3日</option><option value="4">4日</option><option value="5">5日</option>
+                                        <option value="6">6日</option><option value="7">7日</option><option value="8">8日</option><option value="9">9日</option><option value="10">10日</option>
+                                        <option value="11">11日</option><option value="12">12日</option><option value="13">13日</option><option value="14">14日</option><option value="15">15日</option>
+                                        <option value="16">16日</option><option value="17">17日</option><option value="18">18日</option><option value="19">19日</option><option value="20">20日</option>
+                                        <option value="21">21日</option><option value="22">22日</option><option value="23">23日</option><option value="24">24日</option><option value="25">25日</option>
+                                        <option value="26">26日</option><option value="27">27日</option><option value="28">28日</option><option value="29">29日</option><option value="30">30日</option>
+                                        <option value="31">31日</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- お客様情報 -->
+                    <div class="mb-8">
+                        <p class="text-[13px] font-bold text-gray-800 mb-2">お客様情報</p>
+                        <div class="border border-gray-300 border-b-0">
+                            <div class="flex flex-col md:flex-row border-b border-gray-300">
+                                <div class="bg-[#F3F4F6] text-gray-700 text-[13px] font-bold p-3 md:w-[25%] flex items-center">
+                                    お名前 <span class="bg-[#D31B19] text-white text-[10px] px-1.5 py-0.5 ml-2 rounded-[2px] font-normal leading-none tracking-wider">必須</span>
+                                </div>
+                                <div class="p-3 md:w-[75%] bg-white flex items-center">
+                                    <input type="text" placeholder="例：山田 花子" class="border border-gray-400 px-3 py-1.5 w-full md:w-64 text-[13px] focus:outline-none focus:border-[#005BAA]">
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row border-b border-gray-300">
+                                <div class="bg-[#F3F4F6] text-gray-700 text-[13px] font-bold p-3 md:w-[25%] flex items-center">フリガナ</div>
+                                <div class="p-3 md:w-[75%] bg-white flex items-center">
+                                    <input type="text" placeholder="例：ヤマダ ハナコ" class="border border-gray-400 px-3 py-1.5 w-full md:w-64 text-[13px] focus:outline-none focus:border-[#005BAA]">
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row border-b border-gray-300">
+                                <div class="bg-[#F3F4F6] text-gray-700 text-[13px] font-bold p-3 md:w-[25%] flex items-center">
+                                    電話番号 <span class="bg-[#D31B19] text-white text-[10px] px-1.5 py-0.5 ml-2 rounded-[2px] font-normal leading-none tracking-wider">必須</span>
+                                </div>
+                                <div class="p-3 md:w-[75%] bg-white flex items-center">
+                                    <input type="tel" placeholder="例：09012345678" class="border border-gray-400 px-3 py-1.5 w-full md:w-64 text-[13px] focus:outline-none focus:border-[#005BAA]">
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row border-b border-gray-300">
+                                <div class="bg-[#F3F4F6] text-gray-700 text-[13px] font-bold p-3 md:w-[25%] flex items-center">
+                                    メールアドレス <span class="bg-[#D31B19] text-white text-[10px] px-1.5 py-0.5 ml-2 rounded-[2px] font-normal leading-none tracking-wider">必須</span>
+                                </div>
+                                <div class="p-3 md:w-[75%] bg-white flex items-center">
+                                    <input type="email" placeholder="例：hikkoshi@mail.jp" class="border border-gray-400 px-3 py-1.5 w-full md:w-64 text-[13px] focus:outline-none focus:border-[#005BAA]">
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row border-b border-gray-300">
+                                <div class="bg-[#F3F4F6] text-gray-700 text-[13px] font-bold p-3 md:w-[25%] flex items-start md:items-center">ご連絡希望日時</div>
+                                <div class="p-3 md:w-[75%] bg-white flex flex-col gap-3 justify-center">
+                                    <div>
+                                        <p class="text-[11px] text-gray-700 font-bold mb-1">曜日</p>
+                                        <select class="border border-gray-400 px-3 py-1.5 w-full md:w-64 text-[13px] focus:outline-none focus:border-[#005BAA] bg-white cursor-pointer">
+                                            <option value="">選択してください</option>
+                                            <option value="平日">平日</option>
+                                            <option value="土日祝">土日祝</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <p class="text-[11px] text-gray-700 font-bold mb-1">時間帯</p>
+                                        <select class="border border-gray-400 px-3 py-1.5 w-full md:w-64 text-[13px] focus:outline-none focus:border-[#005BAA] bg-white cursor-pointer">
+                                            <option value="">選択してください</option>
+                                            <option value="午前">午前</option>
+                                            <option value="午後">午後</option>
+                                            <option value="夕方以降">夕方以降</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row border-b border-gray-300">
+                                <div class="bg-[#F3F4F6] text-gray-700 text-[13px] font-bold p-3 md:w-[25%] flex items-start md:items-center">お問い合わせ内容</div>
+                                <div class="p-3 md:w-[75%] bg-white flex items-center">
+                                    <textarea class="border border-gray-400 p-2 w-full md:w-80 h-28 text-[13px] resize-y focus:outline-none focus:border-[#005BAA]"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 同意チェックと送信ボタン -->
+                    <div class="mt-10 text-center">
+                        <label class="inline-flex items-center cursor-pointer text-[12px] font-bold text-gray-700 mb-6">
+                            <input type="checkbox" class="w-3.5 h-3.5 mr-2 border-gray-400 rounded-sm cursor-pointer">
+                            <span><a href="privacy.html" target="_blank" class="text-[#D31B19] underline hover:no-underline">プライバシーポリシー</a>を確認し、同意しました。</span>
+                        </label>
+                        
+                        <div class="mt-2">
+                            <button type="button" class="bg-[#D1D5DB] hover:bg-[#C0C4C8] text-[#333333] font-bold text-[15px] py-3.5 px-16 rounded-full inline-flex items-center justify-center gap-3 transition-colors shadow-sm">
+                                この内容で送信する <i class="fas fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 text-gray-500 py-12 pb-32 lg:pb-12 text-sm text-center border-t border-gray-200">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4 mb-6 text-xs">
+                <a href="company.html" class="hover:text-gray-800">会社概要</a>
+                <span class="text-gray-300">|</span>
+                <a href="privacy.html" class="hover:text-gray-800">プライバシーポリシー</a>
+            </div>
+            <p class="text-[10px] text-gray-400">&copy; 2026 HT Connection Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- スマホ専用 追従型フッターボタン -->
+    <div class="lg:hidden fixed bottom-0 left-0 w-full z-50 flex border-t border-gray-200">
+        <a href="tel:0120907842" class="flex-1 bg-white text-gray-800 flex flex-col items-center justify-center py-2.5 font-bold active:bg-gray-50 border-r border-gray-200">
+            <span class="text-[10px] text-gray-500 mb-0.5">電話で相談</span>
+            <span class="text-base leading-none"><i class="fas fa-phone text-gray-400 mr-1"></i> 通話無料</span>
+        </a>
+        <a href="#apply" class="flex-1 bg-sb-blue text-white flex flex-col items-center justify-center py-2.5 font-bold active:bg-blue-700">
+            <span class="text-[10px] opacity-90 mb-0.5">24時間受付中</span>
+            <span class="text-base leading-none"><i class="fas fa-envelope mr-1"></i> Webで申込</span>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // スムーススクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
