@@ -80,17 +80,17 @@
 
     <!-- First View (Hero Section) -->
     <section class="pt-24 lg:pt-28 pb-12 bg-gray-50 overflow-hidden relative">
-        <div class="max-w-5xl mx-auto px-4 relative z-10 text-center">
+        <div class="max-w-5xl mx-auto px-0 md:px-4 relative z-10 text-center">
             
             <!-- メインバナー画像 -->
-            <div class="mb-10 w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-md">
+            <div class="mb-10 w-full max-w-4xl mx-auto md:rounded-xl overflow-hidden md:shadow-md">
                 <img src="おうちのネットはソフトバンク光.png" alt="おうちのネットはソフトバンク光" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x630/FFCC00/222222?text=Banner+Image'">
             </div>
 
             <!-- CTA Buttons for Hero -->
-            <div class="bg-white rounded-3xl shadow-sm p-8 md:p-10 max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center border border-gray-100">
+            <div class="bg-white rounded-3xl shadow-sm p-8 md:p-10 max-w-4xl mx-auto flex flex-col-reverse md:flex-row items-center justify-center border border-gray-100">
                 <!-- 左側：WEB -->
-                <div class="w-full md:w-1/2 md:pr-8 flex flex-col items-center mb-8 md:mb-0">
+                <div class="w-full md:w-1/2 md:pr-8 flex flex-col items-center">
                     <p class="text-2xl font-bold text-gray-800 mb-6 leading-snug text-center tracking-wide">WEBからの<br>お問合せはこちら</p>
                     <a href="#apply" class="w-full max-w-[300px] bg-gradient-to-r from-[#006AB6] to-[#4EBCF0] text-white text-center py-4 rounded-full font-bold text-xl hover:opacity-90 transition-opacity shadow flex justify-center items-center">
                         WEB でお問合せ <i class="fas fa-angle-right ml-3 text-xl"></i>
@@ -102,9 +102,9 @@
                 <div class="md:hidden w-full h-px bg-gray-200 mb-8"></div>
 
                 <!-- 右側：電話 -->
-                <div class="w-full md:w-1/2 md:pl-8 flex flex-col items-center">
+                <div class="w-full md:w-1/2 md:pl-8 flex flex-col items-center mb-8 md:mb-0">
                     <p class="text-xl font-bold text-gray-800 mb-2 tracking-wide">お電話でのお問合せ</p>
-                    <a href="tel:0120907842" class="text-4xl md:text-5xl font-black text-[#0081C4] mb-1 tracking-wider hover:opacity-80 transition-opacity">
+                    <a href="tel:0120907842" class="text-4xl md:text-5xl font-black text-[#0081C4] mb-1 tracking-wider hover:opacity-80 transition-opacity whitespace-nowrap">
                         0120-907-842
                     </a>
                     <p class="text-[13px] text-gray-800 mb-6 tracking-wide">（受付時間10：00〜19：00）</p>
@@ -138,11 +138,11 @@
                             </div>
                             
                             <!-- 電話番号ボタン -->
-                            <div class="bg-white rounded-full py-2 px-6 md:py-3 md:px-8 inline-flex items-center gap-3 mb-5 w-full sm:w-auto justify-center shadow-sm">
+                            <div class="bg-white rounded-full py-2 px-3 md:py-3 md:px-8 inline-flex items-center gap-2 md:gap-3 mb-5 w-full sm:w-auto justify-center shadow-sm">
                                 <div class="w-8 h-8 md:w-10 md:h-10 bg-sb-yellow rounded-full flex items-center justify-center text-white flex-shrink-0">
                                     <i class="fas fa-phone-alt text-sm md:text-lg"></i>
                                 </div>
-                                <a href="tel:0120907842" class="text-3xl md:text-5xl font-black text-gray-800 tracking-wider hover:opacity-80 transition-opacity">
+                                <a href="tel:0120907842" class="text-[26px] sm:text-3xl md:text-5xl font-black text-gray-800 tracking-wider hover:opacity-80 transition-opacity whitespace-nowrap">
                                     0120-907-842
                                 </a>
                             </div>
