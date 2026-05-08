@@ -209,172 +209,184 @@
         </div>
     </section>
 
-    <!-- Pricing Section (画像の料金表) -->
+    <!-- Pricing Section (回線タイプ) -->
     <section class="py-16 bg-[#FDF8EE]">
         <div class="max-w-5xl mx-auto px-4">
             <div class="text-center mb-8">
                 <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-800 mb-2">
-                    高速インターネットが使い放題
+                    回線タイプ
                 </h2>
-                <p class="font-bold text-gray-800 text-sm md:text-base">光回線（1ギガ・10ギガ）</p>
+                <p class="font-bold text-gray-600 text-sm md:text-base">以下の2タイプよりお選びいただけます。</p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div class="grid grid-cols-2 gap-2 md:gap-6 max-w-4xl mx-auto">
                 
                 <!-- 10Gbps Card -->
-                <div class="bg-white rounded-[2rem] shadow-sm overflow-hidden p-2">
-                    <div class="bg-[#F27E1A] text-white rounded-[1.5rem] pt-6 pb-4 flex justify-center items-center gap-2">
-                        <span class="text-[5.5rem] font-black leading-none tracking-tighter -mt-2">10</span>
-                        <div class="flex flex-col">
-                            <span class="text-xs font-bold tracking-wider text-left">下り最大</span>
-                            <span class="text-3xl font-bold leading-none">Gbps <span class="text-[10px] ml-1">※1</span></span>
-                        </div>
+                <div class="flex flex-col">
+                    <!-- Tooltip label -->
+                    <div class="relative bg-gray-800 text-white text-[9px] md:text-xs font-bold py-1.5 px-2 rounded-lg mb-3 text-center mx-1 md:mx-4">
+                        超高速<br class="md:hidden">インターネット！
+                        <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-gray-800"></div>
                     </div>
                     
-                    <div class="px-3 pt-2">
-                        <p class="text-right text-[10px] text-gray-500 mb-2 font-medium">※料金は全て税込表示になります。</p>
-                        <div class="flex gap-2 h-[15rem] mb-5">
-                            <div class="w-24 bg-[#EAF0F6] rounded-xl flex flex-col items-center py-3">
-                                <p class="text-[11px] text-gray-500 font-bold mb-4">回線タイプ</p>
-                                <div class="flex-1 flex flex-col justify-around items-center w-full">
-                                    <div class="text-center">
-                                        <i class="fas fa-home text-4xl text-gray-600 mb-1"></i>
-                                        <p class="text-xs font-bold text-gray-600">戸建て</p>
-                                    </div>
-                                    <div class="text-center">
-                                        <i class="fas fa-building text-4xl text-gray-600 mb-1"></i>
-                                        <p class="text-xs font-bold text-gray-600">マンション</p>
-                                    </div>
-                                </div>
+                    <div class="bg-white rounded-[1rem] md:rounded-[2rem] shadow-sm overflow-hidden p-1.5 md:p-3 flex-1 flex flex-col">
+                        <!-- Orange Header -->
+                        <div class="bg-[#F27E1A] text-white rounded-[0.8rem] md:rounded-[1.5rem] py-3 md:py-6 flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2">
+                            <span class="text-4xl md:text-[5.5rem] font-black leading-none tracking-tighter">10</span>
+                            <div class="flex flex-col items-center md:items-start">
+                                <span class="text-[8px] md:text-xs font-bold tracking-wider">下り最大</span>
+                                <span class="text-sm md:text-3xl font-bold leading-none">Gbps<span class="text-[8px] md:text-[10px] ml-0.5">※1</span></span>
                             </div>
-                            <div class="flex-1 bg-[#EAF0F6] rounded-xl flex flex-col items-center py-3 px-4">
-                                <p class="text-[11px] text-gray-500 font-bold mb-3">料金</p>
-                                <div class="bg-[#F27E1A] text-white text-[11px] font-bold py-1 w-4/5 text-center flex justify-center items-center gap-2 mb-6">
+                        </div>
+                        
+                        <div class="px-1 md:px-3 pt-4 flex-1 flex flex-col gap-3">
+                            <!-- 回線タイプ Box -->
+                            <div class="bg-[#EAF0F6] rounded-xl py-3 px-1 text-center">
+                                <p class="text-[9px] md:text-[11px] text-gray-500 font-bold mb-1 border-b border-white mx-2 pb-1">回線タイプ</p>
+                                <p class="text-sm md:text-xl font-black text-gray-700">10ギガ</p>
+                            </div>
+
+                            <!-- 料金 Box -->
+                            <div class="bg-[#EAF0F6] rounded-xl py-3 px-1 text-center flex-1 flex flex-col">
+                                <p class="text-[9px] md:text-[11px] text-gray-500 font-bold mb-1 border-b border-white mx-2 pb-1">料金<span class="text-[8px] ml-0.5">※2</span></p>
+                                <div class="bg-[#F27E1A] text-white text-[9px] md:text-[11px] font-bold py-1 px-3 rounded-full inline-block my-2 mx-auto">
                                     SoftBank 光
                                 </div>
-                                <div class="flex items-baseline text-[#5484C6] mb-5">
-                                    <span class="text-6xl font-black tracking-tighter">6,930</span>
-                                    <span class="text-lg font-bold ml-1">円<span class="text-xs font-medium text-gray-400">/月</span></span>
-                                </div>
-                                <div class="text-center text-[10px] text-gray-500 leading-snug">
-                                    <p>月額基本料金 6,380円</p>
-                                    <p>+ホームゲートウェイ(S)550円</p>
+                                <div class="mt-auto flex items-center justify-center gap-2">
+                                    <!-- Left Labels -->
+                                    <div class="flex flex-col gap-1">
+                                        <span class="bg-gray-700 text-white text-[8px] md:text-[10px] px-1.5 py-1 rounded-md font-bold leading-none">集合</span>
+                                        <span class="bg-gray-700 text-white text-[8px] md:text-[10px] px-1.5 py-1 rounded-md font-bold leading-none">戸建</span>
+                                    </div>
+                                    <!-- Right Price Info -->
+                                    <div class="text-left">
+                                        <p class="text-[8px] md:text-[10px] text-gray-500 font-bold leading-tight mb-1">月額基本料金・<br>ホームゲートウェイ (S)</p>
+                                        <div class="flex items-baseline gap-0.5">
+                                            <span class="text-xl md:text-4xl font-black text-[#5484C6] leading-none">6,930</span>
+                                            <span class="text-[10px] md:text-lg font-bold text-[#5484C6]">円/月</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="bg-[#EAF0F6] rounded-xl flex flex-col items-center py-4 mb-5 relative">
-                            <div class="absolute -top-[10px] bg-white px-3 py-0.5 rounded-full text-[11px] text-gray-500 font-bold">事務手数料</div>
-                            <div class="flex items-baseline text-[#5484C6] mt-1">
-                                <span class="text-[2.75rem] font-black tracking-tighter leading-none">4,950</span>
-                                <span class="text-sm font-bold ml-1">円</span>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-[#EAF0F6] rounded-xl flex flex-col items-center pt-5 pb-8 relative mt-8">
-                            <div class="absolute -top-[10px] bg-white px-4 py-0.5 rounded-full text-[11px] text-gray-500 font-bold">工事費</div>
-                            <div class="relative mt-1">
-                                <div class="flex items-baseline text-[#5484C6] relative z-10">
-                                    <span class="text-[2.75rem] font-black tracking-tighter leading-none">31,680</span>
-                                    <span class="text-sm font-bold ml-1">円</span>
+ 
+                            <!-- 事務手数料 Box -->
+                            <div class="bg-[#EAF0F6] rounded-xl py-3 px-1 text-center">
+                                <p class="text-[9px] md:text-[11px] text-gray-500 font-bold mb-1 border-b border-white mx-2 pb-1">事務手数料</p>
+                                <div class="flex items-baseline justify-center gap-1 mt-1">
+                                    <span class="text-sm md:text-3xl font-black text-[#5484C6]">4,950</span>
+                                    <span class="text-[9px] md:text-lg font-bold text-[#5484C6]">円</span>
                                 </div>
-                                <div class="absolute top-[55%] left-[-5%] w-[110%] h-[3px] bg-[#E60012] transform -translate-y-1/2 rotate-[-8deg] z-20"></div>
                             </div>
-                            <p class="text-[11px] text-gray-700 font-bold mt-2">一括払い・分割払い</p>
-                        </div>
-                        
-                        <div class="flex justify-center -mt-5 relative z-20 mb-2">
-                            <div class="text-[#D31B19] text-2xl"><i class="fas fa-caret-down"></i></div>
-                        </div>
-                        
-                        <div class="campaign-badge text-white rounded-2xl py-6 px-4 text-center relative z-10 shadow-2xl">
-                            <p class="text-[12px] font-bold mb-1 tracking-[0.2em] opacity-90">今ならキャンペーンで</p>
-                            <p class="text-[2.75rem] md:text-[3.25rem] font-black tracking-tighter leading-none drop-shadow-lg">全額還元</p>
-                            <div class="absolute -top-3 -right-2 bg-yellow-400 text-red-700 text-[10px] font-black px-2 py-1 rounded-full shadow-md animate-float">実質0円</div>
+
                         </div>
                     </div>
                 </div>
 
                 <!-- 1Gbps Card -->
-                <div class="bg-white rounded-[2rem] shadow-sm overflow-hidden p-2">
-                    <div class="bg-[#F0C200] text-white rounded-[1.5rem] pt-6 pb-4 flex justify-center items-center gap-2">
-                        <span class="text-[5.5rem] font-black leading-none tracking-tighter -mt-2">1</span>
-                        <div class="flex flex-col">
-                            <span class="text-xs font-bold tracking-wider text-left">下り最大</span>
-                            <span class="text-3xl font-bold leading-none">Gbps <span class="text-[10px] ml-1">※1</span></span>
-                        </div>
+                <div class="flex flex-col">
+                    <!-- Tooltip label -->
+                    <div class="relative bg-gray-800 text-white text-[9px] md:text-xs font-bold py-1.5 px-2 rounded-lg mb-3 text-center mx-1 md:mx-4">
+                        キャンペーン続々で<br class="md:hidden">超おトク！
+                        <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-gray-800"></div>
                     </div>
-                    
-                    <div class="px-3 pt-2">
-                        <p class="text-right text-[10px] text-gray-500 mb-2 font-medium">※料金は全て税込表示になります。</p>
-                        <div class="flex gap-2 h-[15rem] mb-5">
-                            <div class="w-24 bg-[#EAF0F6] rounded-xl flex flex-col items-center py-3">
-                                <p class="text-[11px] text-gray-500 font-bold mb-4">回線タイプ</p>
-                                <div class="flex-1 flex flex-col justify-around items-center w-full">
-                                    <div class="text-center">
-                                        <i class="fas fa-home text-4xl text-gray-600 mb-1"></i>
-                                        <p class="text-xs font-bold text-gray-600">戸建て</p>
-                                    </div>
-                                    <div class="text-center">
-                                        <i class="fas fa-building text-4xl text-gray-600 mb-1"></i>
-                                        <p class="text-xs font-bold text-gray-600">マンション</p>
-                                    </div>
-                                </div>
+
+                    <div class="bg-white rounded-[1rem] md:rounded-[2rem] shadow-sm overflow-hidden p-1.5 md:p-3 flex-1 flex flex-col">
+                        <!-- Yellow Header -->
+                        <div class="bg-[#F0C200] text-white rounded-[0.8rem] md:rounded-[1.5rem] py-3 md:py-6 flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2">
+                            <span class="text-4xl md:text-[5.5rem] font-black leading-none tracking-tighter">1</span>
+                            <div class="flex flex-col items-center md:items-start">
+                                <span class="text-[8px] md:text-xs font-bold tracking-wider">下り最大</span>
+                                <span class="text-sm md:text-3xl font-bold leading-none">Gbps<span class="text-[8px] md:text-[10px] ml-0.5">※1</span></span>
                             </div>
-                            <div class="flex-1 bg-[#EAF0F6] rounded-xl flex flex-col items-center py-3 px-2">
-                                <p class="text-[11px] text-gray-500 font-bold mb-3">料金</p>
-                                <div class="bg-[#F27E1A] text-white text-[11px] font-bold py-1 w-4/5 text-center flex justify-center items-center gap-2 mb-3">
+                        </div>
+                        
+                        <div class="px-1 md:px-3 pt-4 flex-1 flex flex-col gap-3">
+                            <!-- 回線タイプ Box -->
+                            <div class="bg-[#EAF0F6] rounded-xl py-3 px-1 text-center">
+                                <p class="text-[9px] md:text-[11px] text-gray-500 font-bold mb-1 border-b border-white mx-2 pb-1">回線タイプ</p>
+                                <p class="text-sm md:text-xl font-black text-gray-700">1ギガ</p>
+                            </div>
+
+                            <!-- 料金 Box -->
+                            <div class="bg-[#EAF0F6] rounded-xl py-3 px-1 text-center flex-1 flex flex-col">
+                                <p class="text-[9px] md:text-[11px] text-gray-500 font-bold mb-1 border-b border-white mx-2 pb-1">料金<span class="text-[8px] ml-0.5">※2</span></p>
+                                <div class="bg-[#F0C200] text-white text-[9px] md:text-[11px] font-bold py-1 px-3 rounded-full inline-block my-2 mx-auto">
                                     SoftBank 光
                                 </div>
-                                <div class="flex-1 flex flex-col justify-around w-full">
-                                    <div class="flex items-baseline justify-center text-[#5484C6]">
-                                        <span class="text-[2.75rem] font-black tracking-tighter leading-none">5,720</span>
-                                        <span class="text-sm font-bold ml-1">円<span class="text-xs font-medium text-gray-400">/月</span></span>
+                                <div class="space-y-2 mt-auto">
+                                    <div class="flex items-baseline justify-center gap-1">
+                                        <span class="bg-gray-600 text-white text-[8px] px-1 rounded-sm flex-shrink-0 relative -top-0.5">集合</span>
+                                        <span class="text-sm md:text-3xl font-black text-[#5484C6]">4,180</span>
+                                        <span class="text-[9px] md:text-base font-bold text-[#5484C6]">円/月</span>
                                     </div>
-                                    <div class="w-[85%] mx-auto h-[1px] bg-white my-1"></div>
-                                    <div class="flex items-baseline justify-center text-[#5484C6]">
-                                        <span class="text-[2.75rem] font-black tracking-tighter leading-none">4,180</span>
-                                        <span class="text-sm font-bold ml-1">円<span class="text-xs font-medium text-gray-400">/月</span></span>
+                                    <div class="flex items-baseline justify-center gap-1">
+                                        <span class="bg-gray-600 text-white text-[8px] px-1 rounded-sm flex-shrink-0 relative -top-0.5">戸建</span>
+                                        <span class="text-sm md:text-3xl font-black text-[#5484C6]">5,720</span>
+                                        <span class="text-[9px] md:text-base font-bold text-[#5484C6]">円/月</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="bg-[#EAF0F6] rounded-xl flex flex-col items-center py-4 mb-5 relative">
-                            <div class="absolute -top-[10px] bg-white px-3 py-0.5 rounded-full text-[11px] text-gray-500 font-bold">事務手数料</div>
-                            <div class="flex items-baseline text-[#5484C6] mt-1">
-                                <span class="text-[2.75rem] font-black tracking-tighter leading-none">4,950</span>
-                                <span class="text-sm font-bold ml-1">円</span>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-[#EAF0F6] rounded-xl flex flex-col items-center pt-5 pb-8 relative mt-8">
-                            <div class="absolute -top-[10px] bg-white px-4 py-0.5 rounded-full text-[11px] text-gray-500 font-bold">工事費</div>
-                            <div class="relative mt-1">
-                                <div class="flex items-baseline text-[#5484C6] relative z-10">
-                                    <span class="text-[2.75rem] font-black tracking-tighter leading-none">31,680</span>
-                                    <span class="text-sm font-bold ml-1">円</span>
+ 
+                            <!-- 事務手数料 Box -->
+                            <div class="bg-[#EAF0F6] rounded-xl py-3 px-1 text-center">
+                                <p class="text-[9px] md:text-[11px] text-gray-500 font-bold mb-1 border-b border-white mx-2 pb-1">事務手数料</p>
+                                <div class="flex items-baseline justify-center gap-1 mt-1">
+                                    <span class="text-sm md:text-3xl font-black text-[#5484C6]">4,950</span>
+                                    <span class="text-[9px] md:text-lg font-bold text-[#5484C6]">円</span>
                                 </div>
-                                <div class="absolute top-[55%] left-[-5%] w-[110%] h-[3px] bg-[#E60012] transform -translate-y-1/2 rotate-[-8deg] z-20"></div>
                             </div>
-                            <p class="text-[11px] text-gray-700 font-bold mt-2">一括払い・分割払い</p>
-                        </div>
-                        
-                        <div class="flex justify-center -mt-5 relative z-20 mb-2">
-                            <div class="text-[#D31B19] text-2xl"><i class="fas fa-caret-down"></i></div>
-                        </div>
-                        
-                        <div class="campaign-badge text-white rounded-2xl py-6 px-4 text-center relative z-10 shadow-2xl">
-                            <p class="text-[12px] font-bold mb-1 tracking-[0.2em] opacity-90">今ならキャンペーンで</p>
-                            <p class="text-[2.75rem] md:text-[3.25rem] font-black tracking-tighter leading-none drop-shadow-lg">全額還元</p>
-                            <div class="absolute -top-3 -right-2 bg-yellow-400 text-red-700 text-[10px] font-black px-2 py-1 rounded-full shadow-md animate-float">実質0円</div>
+
                         </div>
                     </div>
                 </div>
 
             </div>
+            
+            <p class="text-[10px] text-gray-500 mt-8 text-center max-w-2xl mx-auto leading-relaxed">
+                ※1 表記の通信速度は、技術規格上の最大値であり、ご利用環境や接続機器などにより実際の通信速度は低下します。<br>
+                ※2 記載の金額はSoftBank 光の月額基本料金です。別途事務手数料等がかかります。<br>
+                ※詳細な適用条件については、お申し込み時にスタッフまでご確認ください。
+            </p>
+
+            <!-- Construction Fee Campaign -->
+            <div class="mt-8 pt-8 border-t border-gray-200">
+                <div class="text-center mb-4">
+                    <p class="text-sb-blue font-bold text-[10px] md:text-xs mb-0.5">SoftBank 光</p>
+                    <h2 class="text-lg md:text-2xl font-black tracking-tight text-gray-800">
+                        開通工事費もおトク！
+                    </h2>
+                </div>
+
+                <div class="max-w-4xl mx-auto px-4 md:px-0">
+                    <!-- Campaign Banner (Adjusted size) -->
+                    <div class="rounded-lg overflow-hidden shadow-md mb-4 mx-auto max-w-[750px] border border-gray-100">
+                        <img src="10G工事費CPバナー.png" 
+                             alt="工事費相当分を実質0円！" 
+                             class="w-full h-auto">
+                    </div>
+
+                    <!-- Campaign Notes (Matched to image width) -->
+                    <div class="bg-white rounded-lg p-3 md:p-4 shadow-sm border border-gray-100 mx-auto max-w-[750px]">
+                        <ul class="space-y-1.5 text-[12px] md:text-[13px] text-gray-600 leading-tight">
+                            <li class="flex items-start gap-2">
+                                <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 flex-shrink-0"></span>
+                                <p>課金開始月を1ヵ月目として31ヵ月目までご利用の場合となります。</p>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 flex-shrink-0"></span>
+                                <p>回線工事費31,680円の場合は<span class="font-bold text-gray-800">1,320円×24ヵ月間</span>、4,620円の場合は<span class="font-bold text-gray-800">1,155円×4ヵ月間</span>の割引となります。</p>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="w-1 h-1 bg-gray-400 rounded-full mt-1.5 flex-shrink-0"></span>
+                                <p>開通工事が発生しない場合、キャンペーン対象外となります。</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
 
     <!-- Official Campaigns -->
     <section class="py-20 bg-gray-50 border-y border-gray-200">
@@ -415,20 +427,6 @@
                     </div>
                 </div>
                 
-                <div class="bg-white border border-gray-200 flex flex-col md:flex-row hover:shadow-md transition-shadow">
-                    <div class="bg-[#F8F9FA] p-6 flex flex-col justify-center items-center md:w-1/4 text-center border-b md:border-b-0 md:border-r border-gray-100">
-                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-3 shadow-sm border border-gray-100">
-                            <img src="https://api.iconify.design/fluent-emoji-flat:hammer-and-wrench.svg" alt="工事" class="w-10 h-10">
-                        </div>
-                        <h3 class="font-bold text-base text-gray-800 leading-tight">工事費サポート<br>はじめて割</h3>
-                    </div>
-                    <div class="p-6 md:w-3/4 flex flex-col justify-center">
-                        <p class="text-lg font-bold mb-2 text-gray-800">基本工事費が実質無料！</p>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            開通工事費（最大31,680円）と同額を毎月の月額料金から割引。初期費用を抑えて光回線を始められます。
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
