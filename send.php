@@ -108,14 +108,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $auto_reply_body .= "※本メールはシステムによる自動送信です。\n";
         $auto_reply_body .= "※お心当たりのない場合は、誠に恐縮ですが本メールの破棄をお願いいたします。\n\n";
         $auto_reply_body .= "━━━━━━━━━━━━━━━━━━━━━━━━━━\n";
-        $auto_reply_body .= "株式会社HTコネクション\n";
-        $auto_reply_body .= "東京都渋谷区桜丘町15-14 フジビル40 7階2\n";
+        $auto_reply_body .= "光引越しナビ\n";
+        $auto_reply_body .= "0120-000-000\n";
         $auto_reply_body .= "━━━━━━━━━━━━━━━━━━━━━━━━━━\n";
 
         $auto_reply_subject_jp = mb_encode_mimeheader($auto_reply_subject, "ISO-2022-JP");
         $auto_reply_body_jp = mb_convert_encoding($auto_reply_body, "ISO-2022-JP", "UTF-8");
         
-        $auto_reply_headers = "From: " . mb_encode_mimeheader("株式会社HTコネクション", "ISO-2022-JP") . " <no-reply@ht-connection.co.jp>\n";
+        $auto_reply_headers = "From: " . mb_encode_mimeheader("光引越しナビ", "ISO-2022-JP") . " <no-reply@ht-connection.co.jp>\n";
         $auto_reply_headers .= "MIME-Version: 1.0\n";
         $auto_reply_headers .= "Content-Type: text/plain; charset=ISO-2022-JP\n";
         $auto_reply_headers .= "Content-Transfer-Encoding: 7bit";
