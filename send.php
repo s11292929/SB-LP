@@ -69,17 +69,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $body .= "送信日時: " . date("Y/m/d H:i:s") . "\n";
     $body .= "送信元IP: " . $_SERVER['REMOTE_ADDR'] . "\n";
 
-    // メールヘッダー
-    $headers = "From: " . mb_encode_mimeheader("SoftBank 光 フォーム") . " <no-reply@ht-connection.co.jp>\n";
-    $headers .= "Reply-To: " . $email . "\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8";
-
-    // 言語設定
+    // 言語・エンコード設定
     mb_language("Japanese");
     mb_internal_encoding("UTF-8");
 
-    // メール送信（エラーチェックは簡略化）
-    mb_send_mail($to, $subject, $body, $headers);
+    // ISO-2022-JP に変換（日本で最も一般的なメール形式）
+    $subject_jp = mb_convert_encoding($subject, "ISO-2022-JP", "UTF-8");
+    $body_jp = mb_convert_encoding($body, "ISO-2022-JP", "UTF-8");
+
+    // メールヘッダーの作成
+    $headers = "From: " . mb_encode_mimeheader("SoftBank 光 フォーム", "ISO-2022-JP") . " <no-reply@ht-connection.co.jp>\n";
+    $headers .= "Reply-To: " . $email . "\n";
+    $headers .= "MIME-Version: 1.0\n";
+    $headers .= "Content-Type: text/plain; charset=ISO-2022-JP\n";
+    $headers .= "Content-Transfer-Encoding: 7bit";
+
+    // メール送信
+    mail($to, $subject_jp, $body_jp, $headers);
 
     // サンクスページへリダイレクト
     header("Location: thanks");
