@@ -84,8 +84,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers .= "Content-Type: text/plain; charset=ISO-2022-JP\n";
     $headers .= "Content-Transfer-Encoding: 7bit";
 
-    // メール送信
+    // メール送信（管理者宛）
     mail($to, $subject_jp, $body_jp, $headers);
+
+    // ---------------------------------------------------------
+    // 自動返信メールの送信（ユーザー宛）
+    // ---------------------------------------------------------
+    if (!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $auto_reply_subject = "【SoftBank 光】お問い合わせありがとうございました";
+        $auto_reply_body = $name . " 様\n\n";
+        $auto_reply_body .= "この度は、サイトよりお問い合わせいただき、誠にありがとうございます。\n";
+        $auto_reply_body .= "以下の内容で受付いたしました。\n\n";
+        $auto_reply_body .= "内容を確認の上、担当者より改めてご連絡させていただきますので、\n";
+        $auto_reply_body .= "恐れ入りますが、今しばらくお待ちくださいませ。\n\n";
+        $auto_reply_body .= "--------------------------------------------------\n";
+        $auto_reply_body .= "■ お問い合わせ内容の控え\n";
+        $auto_reply_body .= "--------------------------------------------------\n";
+        $auto_reply_body .= "お名前: " . $name . " 様\n";
+        $auto_reply_body .= "電話番号: " . $tel . "\n";
+        $auto_reply_body .= "ご連絡希望時間帯: " . $contact_time . "\n";
+        $auto_reply_body .= "メッセージ: \n" . $message . "\n";
+        $auto_reply_body .= "--------------------------------------------------\n\n";
+        $auto_reply_body .= "※本メールはシステムによる自動送信です。\n";
+        $auto_reply_body .= "※お心当たりのない場合は、誠に恐縮ですが本メールの破棄をお願いいたします。\n\n";
+        $auto_reply_body .= "━━━━━━━━━━━━━━━━━━━━━━━━━━\n";
+        $auto_reply_body .= "株式会社HTコネクション\n";
+        $auto_reply_body .= "東京都渋谷区桜丘町15-14 フジビル40 7階2\n";
+        $auto_reply_body .= "━━━━━━━━━━━━━━━━━━━━━━━━━━\n";
+
+        $auto_reply_subject_jp = mb_encode_mimeheader($auto_reply_subject, "ISO-2022-JP");
+        $auto_reply_body_jp = mb_convert_encoding($auto_reply_body, "ISO-2022-JP", "UTF-8");
+        
+        $auto_reply_headers = "From: " . mb_encode_mimeheader("株式会社HTコネクション", "ISO-2022-JP") . " <no-reply@ht-connection.co.jp>\n";
+        $auto_reply_headers .= "MIME-Version: 1.0\n";
+        $auto_reply_headers .= "Content-Type: text/plain; charset=ISO-2022-JP\n";
+        $auto_reply_headers .= "Content-Transfer-Encoding: 7bit";
+
+        mail($email, $auto_reply_subject_jp, $auto_reply_body_jp, $auto_reply_headers);
+    }
 
     // サンクスページへリダイレクト
     header("Location: thanks");
