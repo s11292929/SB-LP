@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mb_internal_encoding("UTF-8");
 
     // ISO-2022-JP に変換（日本で最も一般的なメール形式）
-    $subject_jp = mb_convert_encoding($subject, "ISO-2022-JP", "UTF-8");
+    $subject_jp = mb_encode_mimeheader($subject, "ISO-2022-JP");
     $body_jp = mb_convert_encoding($body, "ISO-2022-JP", "UTF-8");
 
     // メールヘッダーの作成
