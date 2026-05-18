@@ -109,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $auto_reply_body .= "※お心当たりのない場合は、誠に恐縮ですが本メールの破棄をお願いいたします。\n\n";
         $auto_reply_body .= "━━━━━━━━━━━━━━━━━━━━━━━━━━\n";
         $auto_reply_body .= "光引越しナビ\n";
-        $auto_reply_body .= "0120-000-000\n";
+        $auto_reply_body .= "0120-907-087\n";
         $auto_reply_body .= "━━━━━━━━━━━━━━━━━━━━━━━━━━\n";
 
         $auto_reply_subject_jp = mb_encode_mimeheader($auto_reply_subject, "ISO-2022-JP");
