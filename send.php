@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $body_jp = mb_convert_encoding($body, "ISO-2022-JP", "UTF-8");
 
     // メールヘッダーの作成
-    $headers = "From: " . mb_encode_mimeheader("SoftBank 光 フォーム", "ISO-2022-JP") . " <no-reply@ht-connection.co.jp>\n";
+    $headers = "From: " . mb_encode_mimeheader("SoftBank 光 フォーム", "ISO-2022-JP") . " <no-reply@hikari-hikkoshi-navi.jp>\n";
     $headers .= "Reply-To: " . $email . "\n";
     $headers .= "MIME-Version: 1.0\n";
     $headers .= "Content-Type: text/plain; charset=ISO-2022-JP\n";
@@ -115,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $auto_reply_subject_jp = mb_encode_mimeheader($auto_reply_subject, "ISO-2022-JP");
         $auto_reply_body_jp = mb_convert_encoding($auto_reply_body, "ISO-2022-JP", "UTF-8");
         
-        $auto_reply_headers = "From: " . mb_encode_mimeheader("光引越しナビ", "ISO-2022-JP") . " <no-reply@ht-connection.co.jp>\n";
+        $auto_reply_headers = "From: " . mb_encode_mimeheader("光引越しナビ", "ISO-2022-JP") . " <no-reply@hikari-hikkoshi-navi.jp>\n";
         $auto_reply_headers .= "MIME-Version: 1.0\n";
         $auto_reply_headers .= "Content-Type: text/plain; charset=ISO-2022-JP\n";
         $auto_reply_headers .= "Content-Transfer-Encoding: 7bit";
